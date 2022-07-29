@@ -82,12 +82,18 @@
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=b6kr9eqx1e&callback=initMap"></script>
     <script type="text/javascript">
         var map = null;
+        var marker = null;
 
         function initMap() {
             map = new naver.maps.Map('map', {
-                center: new naver.maps.LatLng(37.3595704, 127.105399),
+                center: new naver.maps.LatLng(37.340045, 127.106696),
                 zoom: 10
             });
+            marker = new naver.maps.Marker({
+              position: new naver.maps.LatLng(37.340045, 127.106696),
+              map: map
+          });
+
         }
     </script>
 </body>
