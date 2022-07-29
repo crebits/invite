@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
     <link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
 
@@ -55,7 +55,7 @@
       </div>
       <div class="pannel second-area">
         <div class="content front">
-          <p>3</p>
+          <div id="map" style="width:100%;height:400px;"></div>
           <div>
             <button type="button" data-go="sec">go to 2</button>
             <button type="button" data-go="fou">go to 4</button>
@@ -78,9 +78,17 @@
     </div>
 
     <script src="./common.js"></script>
-    <script src="./date.js"></script>
+    <script src="./date.js"></script> 
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=b6kr9eqx1e&callback=initMap"></script>
+    <script type="text/javascript">
+        var map = null;
 
-    <script>
+        function initMap() {
+            map = new naver.maps.Map('map', {
+                center: new naver.maps.LatLng(37.3595704, 127.105399),
+                zoom: 10
+            });
+        }
     </script>
 </body>
 </html>
