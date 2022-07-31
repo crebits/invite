@@ -14,6 +14,7 @@
         height: 100%;
         overflow: hidden;
         position: relative;
+        -webkit-perspective: 1000px;
         perspective: 1000px;
         background: url('https://d1icd6shlvmxi6.cloudfront.net/gsc/DNUM85/f7/fb/b9/f7fbb93cb6a2429caff05035793e533c/images/demo/bg.jpg?token=469b7d7ccd8cb41260762f746b435185dacd2d62e0d174162421920759801f71') no-repeat center;
       }
@@ -22,23 +23,30 @@
         height: 100%;
         font: bold 3.7vw/7.4vw serif;
         color: #000;
+        -webkit-transition:1.2s;
+        -webkit-transform-style: preserve-3d;
         transition:1.2s;
         transform-style: preserve-3d;
         background-color: #e6e6e6;
       }
       .first-area{
         position: absolute;
+        -webkit-transform: translateX(0) rotateY(0);
+        -webkit-transform-origin: left;
         transform: translateX(0) rotateY(0);
         transform-origin: left;
         z-index: 10;
       }
       .second-area{
         position: absolute;
+        -webkit-transform-origin: right;
+        -webkit-transform: translateX(0);
         transform-origin: right;
         transform: translateX(0);
         z-index: 9;
       }
       .content{
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         /* text-shadow: 2px 2px 2px #000; */
         width: 100%;
