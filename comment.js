@@ -1,7 +1,7 @@
 (() => {
     const { createClient } = supabase;
     const commentArea = document.querySelector('#commentArea');
-    const commentWrap = document.querySelector('.comment_wrap');
+    const commentWrap = document.querySelector('.comment-wrap');
     supabase = createClient('https://vhrvlqeneibkmnpxavfi.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZocnZscWVuZWlia21ucHhhdmZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTY0ODUwODQsImV4cCI6MTk3MjA2MTA4NH0.Rixg9sFOIrlM0PwWBsGDbO0rj9XtH0mv0ZEMGJUJN70');
 
     const loads = async function(){
@@ -43,8 +43,8 @@
 
     commentWrap.addEventListener('click', async e => {
       const el = e.target;
-      if(el.className === 'btn_popup') commentWrap.classList.add('insert');
-      if(el.className === 'comment_popup') {
+      if(el.className === 'btn-popup') commentWrap.classList.add('insert');
+      if(el.className === 'comment-popup') {
         commentWrap.classList.remove('insert');
         commentWrap.classList.remove('delete');
       }

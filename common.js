@@ -1,6 +1,6 @@
 (function(){
   const invitation = document.querySelector('.invitation')
-  const btnArea = document.querySelector('.btn_area')
+  const btnArea = document.querySelector('.btn-area')
     
   btnArea.addEventListener('click', function(e){
     let page = invitation.dataset.page
