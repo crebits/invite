@@ -198,6 +198,44 @@ li {
   margin: 0 auto;
 }
 
+.heart {
+  color: #ea7664;
+  text-align: center;
+  margin: 7vw 0 5vw;
+}
+
+.groom, .bride {
+  width: 95%;
+  background: transparent;
+  color: #c28e79;
+  border-color: #c28e79;
+}
+
+.groom {
+  margin-bottom: 2.5vw;
+}
+
+:where(.groom, .bride)::before {
+  font-size: 5vw;
+  margin-right: 10px;
+}
+
+:where(.groom, .bride) span {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  left: -99999px;
+  top: -99999px;
+}
+
+.groom::before {
+  content: '\1F935';
+}
+
+.bride::before {
+  content: '\1F470';
+}
+
 .invite-text, .merry {
   text-align: center;
 }
@@ -403,5 +441,17 @@ li {
 
   .map-area dl dt {
       margin: 19px 0 4px;
+  }
+
+  :where(.groom, .bride)::before {
+    font-size: 21px;
+  }
+  
+  .heart {
+    margin: 29px 0 21px;
+  }
+  
+  .groom {
+    margin-bottom: 10px;
   }
 }

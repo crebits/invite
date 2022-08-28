@@ -42,4 +42,17 @@
       }</p>`
     );
   document.querySelector("#calendar").insertAdjacentHTML("afterbegin", html);
+
+  document.querySelector('.heart-area').addEventListener('click', (e) => {
+    if(e.target.tagName === 'BUTTON'){
+      let range = document.createRange();
+      let selection = window.getSelection();
+      
+      range.selectNodeContents(e.target.children[0]);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      document.execCommand("copy");
+      alert(`복사되어습니다.\n${e.target.className === 'groom' ? '신한은행 (예금주: 최선호)' : '국민은행 (예금주: 박미향)' }\n${range}`)
+    }
+  });
 })();
