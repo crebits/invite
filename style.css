@@ -43,6 +43,7 @@ li {
   grid-template-columns: repeat(auto-fit, minmax(30%, auto));
   width: 100%;
   max-width: 420px;
+  padding-top: 1px;
 }
 
 .btn-area button {
@@ -274,19 +275,22 @@ li {
   grid-auto-flow: dense;
   grid-auto-rows: minmax(100px, 10vmin);
   grid-gap: 10px;
-  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
   min-width: 310px;
   width: calc(50vmin + 60px);
   height: 100%;
   overflow-y: auto;
 }
 
-.img-wrap div {
+.img-wrap li {
   grid-row: span var(--row);
   grid-column: span var(--col);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-[data-page='4'] .img-wrap div {
+[data-page='4'] .img-wrap li {
   animation: scaleIn 0.55s 0.65s ease both;
 }
 
@@ -294,12 +298,127 @@ li {
   from { transform: scale(0); opacity: 0;}
 } */
 
-.img-wrap div:nth-child(odd) {
-  background: yellow;
+.img-wrap li:nth-child(1) {
+  --row: 2;
+  --col: 2;
 }
 
-.img-wrap div:nth-child(even) {
-  background: green;
+.img-wrap li:nth-child(2) {
+  --row: 1;
+  --col: 2;
+}
+
+.img-wrap li:nth-child(3) {
+  --row: 1;
+  --col: 1;
+}
+
+.img-wrap li:nth-child(4) {
+  --row: 1;
+  --col: 2;
+}
+
+.img-wrap li:nth-child(5) {
+  --row: 2;
+  --col: 2;
+}
+
+.img-wrap li:nth-child(6) {
+  --row: 1;
+  --col: 1;
+}
+
+.img-wrap li:nth-child(7) {
+  --row: 1;
+  --col: 2;
+}
+
+.img-wrap li:nth-child(8) {
+  --row: 1;
+  --col: 1;
+}
+
+.img-wrap li:nth-child(9) {
+  --row: 1;
+  --col: 1;
+}
+
+.img-wrap li:nth-child(10) {
+  --row: 1;
+  --col: 2;
+}
+
+.img-wrap li:nth-child(11) {
+  --row: 2;
+  --col: 1;
+}
+
+.img-wrap li:nth-child(12) {
+  --row: 2;
+  --col: 1;
+}
+
+.img-wrap li:nth-child(13) {
+  --row: 1;
+  --col: 1;
+}
+
+.img-wrap li:nth-child(14) {
+  --row: 2;
+  --col: 1;
+}
+
+.img-wrap li:nth-child(15) {
+  --row: 1;
+  --col: 2;
+}
+
+.img-wrap li:nth-child(16) {
+  --row: 1;
+  --col: 1;
+}
+
+.img-wrap li:nth-child(17) {
+  --row: 1;
+  --col: 2;
+}
+
+.img-wrap li:nth-child(18) {
+  --row: 1;
+  --col: 2;
+}
+
+.img-wrap li:nth-child(19) {
+  --row: 1;
+  --col: 2;
+}
+
+.img-pop {
+  display: none;
+  justify-content: center;
+  align-items: center;position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.show + .img-pop {
+  display: flex;
+}
+
+.img-pop::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+z-index: -1;}
+
+.img-pop img{
+  width: 90%;
 }
 
 .comment-wrap {
