@@ -35,7 +35,19 @@ li {
   overflow: hidden;
   position: relative;
   perspective: 1000px;
-  background: url('https://d1icd6shlvmxi6.cloudfront.net/gsc/DNUM85/f7/fb/b9/f7fbb93cb6a2429caff05035793e533c/images/demo/bg.jpg?token=469b7d7ccd8cb41260762f746b435185dacd2d62e0d174162421920759801f71') no-repeat center;
+  background: #fff;
+}
+
+.invitation::before{
+  content: "";
+  background: url('./images/bg.jpg');
+  background-size: cover;
+  opacity: 0.7;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
 }
 
 .btn-area {
