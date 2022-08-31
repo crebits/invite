@@ -274,16 +274,25 @@ li {
   grid-auto-flow: dense;
   grid-auto-rows: minmax(100px, 10vmin);
   grid-gap: 10px;
-  grid-template-columns: repeat(5, minmax(50px, 1fr));
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
   min-width: 310px;
   width: calc(50vmin + 60px);
+  height: 100%;
+  overflow-y: auto;
 }
 
 .img-wrap div {
   grid-row: span var(--row);
   grid-column: span var(--col);
-  animation: scaleIn 0.15s calc(0 * 0.1s) ease both;
 }
+
+[data-page='4'] .img-wrap div {
+  animation: scaleIn 0.55s 0.65s ease both;
+}
+
+/* @keyframes scaleIn{
+  from { transform: scale(0); opacity: 0;}
+} */
 
 .img-wrap div:nth-child(odd) {
   background: yellow;
