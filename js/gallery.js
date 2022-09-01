@@ -27,12 +27,13 @@
 
     imgPop.addEventListener('click', (e) => {
         const el = e.target;
-        if (el.tagName === 'DIV') {
-            imgWrap.classList.remove('show')
-        }
         if (el.tagName === 'BUTTON') {
-            el.className ==='prev' ? weddingImg.dataset.acc-- : weddingImg.dataset.acc++;
-            imageNmae(weddingImg.dataset.acc)
+            if(el.className === 'close'){
+                imgWrap.classList.remove('show')
+            } else {
+                el.className ==='prev' ? weddingImg.dataset.acc-- : weddingImg.dataset.acc++;
+                imageNmae(weddingImg.dataset.acc);
+            }
         }
     });
 })()
