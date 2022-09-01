@@ -20,6 +20,7 @@ body {
 button {
   border: none;
   border-radius: 5px;
+  outline: none;
 }
 
 li {
@@ -57,7 +58,9 @@ li {
 }
 
 .btn-area button {
-height: 25px;border: 1px solid;}
+  height: 25px;
+  border: 1px solid #000;
+}
 
 .arrow {
   width: 32px;
@@ -286,7 +289,6 @@ height: 25px;border: 1px solid;}
   grid-auto-rows: minmax(100px, 10vmin);
   grid-gap: 10px;
   grid-template-columns: repeat(4, minmax(50px, 1fr));
-  
   width: 100%;
   height: 100%;
   overflow-y: auto;
@@ -548,6 +550,7 @@ from { transform: scale(0); opacity: 0;}
   background-color: #fff;
   padding: 20px 20px 60px;
   position: relative;
+  border-radius: 5px;
   display: none;
 }
 
@@ -598,6 +601,9 @@ from { transform: scale(0); opacity: 0;}
   position: absolute;
   left: 0;
   bottom: 0;
+  height: 35px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 @media (min-width: 420px) {
