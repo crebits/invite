@@ -1,14 +1,1 @@
-(function(){
-  const invitation = document.querySelector('.invitation')
-  const btnArea = document.querySelector('.btn-area')
-    
-  btnArea.addEventListener('click', function(e){
-    let page = invitation.dataset.page
-    if (e.target.className === 'prev') {
-      (page === '1') ? page = 5 : page-- ;
-    } else {
-      (page === '5') ? page = 1 : page++ ;
-    }
-    invitation.dataset.page = page
-  })
-})()
+!function(){const a=document.querySelector(".invitation"),e=document.querySelector(".btn-area");e.addEventListener("click",function(e){let t=a.dataset.page;"prev"===e.target.className?"1"===t?t=5:t--:"5"===t?t=1:t++,a.dataset.page=t})}();
