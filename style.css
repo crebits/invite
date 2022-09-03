@@ -370,7 +370,7 @@ from { transform: scale(0); opacity: 0;}
 }
 
 .img-wrap li:nth-child(13) {
-  --row: 1;
+  --row: 2;
   --col: 2;
 }
 
@@ -385,6 +385,21 @@ from { transform: scale(0); opacity: 0;}
 }
 
 .img-wrap li:nth-child(16) {
+  --row: 1;
+  --col: 2;
+}
+
+.img-wrap li:nth-child(17) {
+  --row: 2;
+  --col: 2;
+}
+
+.img-wrap li:nth-child(18) {
+  --row: 1;
+  --col: 2;
+}
+
+.img-wrap li:nth-child(19) {
   --row: 1;
   --col: 2;
 }
